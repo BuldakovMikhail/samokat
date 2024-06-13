@@ -5,7 +5,8 @@ from helpers import validation_step_mixup, device
 
 
 if __name__ == "__main__":
-    model_mixup = BertWithClassifierMixUp(None)
+    hidden_layers = 8
+    model_mixup = BertWithClassifierMixUp(hidden_layers)
     model_mixup.to(device)
 
     path = "./best_model.pt"
