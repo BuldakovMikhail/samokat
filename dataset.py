@@ -26,3 +26,6 @@ train_dataloader = DataLoader(
 eval_dataloader = DataLoader(
     tokenized_datasets["validation"], batch_size=8, collate_fn=data_collator
 )
+test_dataloader = DataLoader(
+    tokenized_datasets["test"], shuffle=True, batch_size=8, collate_fn=data_collator
+)
