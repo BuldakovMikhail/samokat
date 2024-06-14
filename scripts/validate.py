@@ -9,8 +9,8 @@ if __name__ == "__main__":
 
     path = "./best_model.pt"
 
-    model_mixup = torch.load(path)
-    # model_mixup.to(device)
+    model_mixup = torch.load(path, map_location=device)
+    model_mixup.to(device)
 
     val_acc, val_f1 = validation_step_mixup(test_dataloader, model_mixup)
 
